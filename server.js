@@ -2,6 +2,10 @@
 var express     = require('express');
 var mongoose    = require('mongoose');
 var bodyParser  = require('body-parser'); 
+var jwt         = require('jsonwebtoken');
+
+//  jwt
+var __secret = 'secret';
 
 //  MongoDB
 var __dirname = 'mongodb://localhost/guiadb';
@@ -13,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //  Rotas
+app.use('/api', require('./route/auth'));
 app.use('/api', require('./route/api'));
 app.use('/api', require('./route/categoria.controller'));
 
