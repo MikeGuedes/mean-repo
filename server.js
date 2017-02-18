@@ -16,6 +16,8 @@ router.use(function(req, res, next){
 //  jwt
 var __secret = 'secret';
 
+/* Descrição adicionada*/
+
 //  MongoDB
 var __dirname = 'mongodb://localhost/guiadb';
 mongoose.connect(__dirname);
