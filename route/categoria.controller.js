@@ -9,6 +9,14 @@ var Categoria = require('../model/categoria');
 Categoria.methods(['get', 'put', 'post', 'delete']);
 Categoria.register(router, '/categoria');
 
+//  Router config auth
+router.use(function(req, res, next){
+    var token = req.body.token || req.headers['token'];
+    if(!token){
+        res.send('Token omitido.');
+    }
+});
+
 // router.get('/categoria', function(req, res){
 //     res.send('Lista de categorias');
 // });

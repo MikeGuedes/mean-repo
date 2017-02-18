@@ -3,6 +3,15 @@ var express     = require('express');
 var mongoose    = require('mongoose');
 var bodyParser  = require('body-parser'); 
 var jwt         = require('jsonwebtoken');
+var router      = express.Router();
+
+//  Router config auth
+router.use(function(req, res, next){
+    var token = req.body.token || req.headers['token'];
+    if(!token){
+        res.send('Token omitido.');
+    }
+});
 
 //  jwt
 var __secret = 'secret';
