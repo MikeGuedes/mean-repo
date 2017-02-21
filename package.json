@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://mikeguedes@bitbucket.org/mgsmobile/_guia.de.jardim.america.api.git"
+    "url": "git+https://github.com/MikeGuedes/mean-stack-project.git"
   },
   "author": "Michael Guedes",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/mgsmobile/_guia.de.jardim.america.api#readme",
+  "homepage": "",
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.1",
